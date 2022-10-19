@@ -15,7 +15,7 @@
 
           v-for="item in menuItems"
           :key="item.title"
-          :to="item.url">
+          :to="item.to">
           <v-icon left darken-2>{{ item.icon }}</v-icon>
           {{ item.title }}
         </v-btn>
@@ -37,8 +37,9 @@ export default {
       homePage:'/',
       sidebar: false,
       menuItems: [
-          { title: 'Bind', url: '/bind', icon: 'mdi-domain' },
-          { title: 'BindModel', url: '/bind-model', icon: 'mdi-message-text' },
+          { title: 'Bind', to: '/bind', icon: 'mdi-domain' },
+          { title: 'BindModel', to: '/bind-model', icon: 'mdi-message-text' },
+          { title: 'Loop', to: '/loop', icon:'mdi-domain'}
      ]
     }
   },

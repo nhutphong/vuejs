@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import TodoView from '../views/TodoView.vue'
+
 import Bind from '@/components/Bind'
 import BindModel from '@/components/BindModel'
+import Loop from '@/components/Loop'
 
 const routes = [
   {
@@ -18,6 +21,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
+    path: '/todo',
+    name: 'Todo',
+    component: TodoView
+  },
+  {
     path: '/bind',
     name: 'Bind',
     component: Bind
@@ -27,6 +35,12 @@ const routes = [
     name: 'BindModel',
     component: BindModel
   },
+  {
+    path: '/loop',
+    name: 'Loop',
+    component: Loop
+  },
+ 
 ]
 
 const router = createRouter({
@@ -40,3 +54,4 @@ export default router
 // http://localhost:8080/
 // http://localhost:8080/bind
 // http://localhost:8080/bind-model
+// http://localhost:8080/loop

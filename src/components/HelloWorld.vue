@@ -78,8 +78,8 @@
 
         <v-row justify="center">
           <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
+            v-for="(eco, index) in ecosystem"
+            :key="index"
             :href="eco.href"
             class="subheading mx-3"
             target="_blank"
