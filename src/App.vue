@@ -72,6 +72,8 @@ export default {
       { title: 'BindModel', icon: 'mdi-database', to: '/bind-model' },
       { title: 'Loop', icon: 'mdi-sync', to: '/loop' },
       { title: 'Todo', icon: 'mdi-sync', to: '/toto' },
+      { title: 'Slot', icon: 'mdi-sync', to: '/slot' },
+      { title: 'Tab', icon: 'mdi-table-large', to: '/tab' },
     ],
     right: null,
   }), //end data

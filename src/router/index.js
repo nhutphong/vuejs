@@ -5,6 +5,8 @@ import TodoView from '../views/TodoView.vue'
 import Bind from '@/components/Bind'
 import BindModel from '@/components/BindModel'
 import Loop from '@/components/Loop'
+import Slot from '@/components/SlotParent'
+import Tab from '@/components/Tab'
 
 const routes = [
   {
@@ -39,6 +41,16 @@ const routes = [
     path: '/loop',
     name: 'Loop',
     component: Loop
+  },
+  {
+    path: '/slot',
+    name: 'Slot',
+    component: Slot
+  },
+  {
+    path: '/tab',
+    name: 'Tab',
+    component: Tab
   },
  
 ]
