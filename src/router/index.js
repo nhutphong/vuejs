@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TodoView from '../views/TodoView.vue'
+import HookView from '../views/HookView.vue'
 
 import Bind from '@/components/Bind'
 import BindModel from '@/components/BindModel'
@@ -26,6 +27,11 @@ const routes = [
     path: '/todo',
     name: 'Todo',
     component: TodoView
+  },
+  {
+    path: '/hook',
+    name: 'Hook',
+    component: HookView
   },
   {
     path: '/bind',

@@ -74,6 +74,7 @@ export default {
       { title: 'Todo', icon: 'mdi-sync', to: '/toto' },
       { title: 'Slot', icon: 'mdi-sync', to: '/slot' },
       { title: 'Tab', icon: 'mdi-table-large', to: '/tab' },
+      { title: 'hook', icon: 'mdi-table-large', to: '/hook' },
     ],
     right: null,
   }), //end data

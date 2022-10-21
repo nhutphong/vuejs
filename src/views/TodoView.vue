@@ -23,6 +23,7 @@ export default {
       { title: 'BindModel', icon: 'mdi-database', to: '/bind-model' },
       { title: 'Loop', icon: 'mdi-sync', to: '/loop' },
       { title: 'Todo', icon: 'mdi-sync', to: '/todo' },
+      { title: 'Hook', icon: 'mdi-sync', to: '/hook' },
     ],
     right: null,
   }), //end data
