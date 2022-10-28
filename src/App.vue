@@ -67,14 +67,14 @@ export default {
     drawer: null,
     items: [
       { title: 'Home', icon: 'mdi-format-list-checks', to:'/'},
+      { title: 'computed watch', icon: 'mdi-image', to: '/bind'},
+      { title: 'composition API', icon: 'mdi-table-large', to: '/hook' },
       { title: 'About', icon: 'mdi-help-box', to: '/about' },
-      { title: 'Bind', icon: 'mdi-image', to: '/bind'},
       { title: 'BindModel', icon: 'mdi-database', to: '/bind-model' },
       { title: 'Loop', icon: 'mdi-sync', to: '/loop' },
-      { title: 'Todo', icon: 'mdi-sync', to: '/toto' },
       { title: 'Slot', icon: 'mdi-sync', to: '/slot' },
       { title: 'Tab', icon: 'mdi-table-large', to: '/tab' },
-      { title: 'hook', icon: 'mdi-table-large', to: '/hook' },
+      { title: 'Clock', icon: 'mdi-alarm', to: '/clock' },
     ],
     right: null,
   }), //end data

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import TodoView from '../views/TodoView.vue'
 import HookView from '../views/HookView.vue'
+import ClockView from '../views/ClockView.vue'
 
 import Bind from '@/components/Bind'
 import BindModel from '@/components/BindModel'
@@ -24,14 +24,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/todo',
-    name: 'Todo',
-    component: TodoView
-  },
-  {
     path: '/hook',
     name: 'Hook',
     component: HookView
+  },
+  {
+    path: '/clock',
+    name: 'Clock',
+    component: ClockView
   },
   {
     path: '/bind',
@@ -59,7 +59,7 @@ const routes = [
     component: Tab
   },
  
-]
+] //end router
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

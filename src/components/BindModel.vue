@@ -1,8 +1,6 @@
 <template>
   <!-- phai code into v-container-->
   <v-container>
-    
-
 
     <input v-model="message" placeholder="Nhập thông điệp">
     <p>text: {{ message }}</p>

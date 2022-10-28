@@ -45,12 +45,12 @@ state:
 
 
 lifecycle hook
-  befoceCreate và created -> sử dụng setup()
+  befoceCreate và created  -> sử dụng setup()
   beforeMount              -> có thể sử dụng onBeforeMount (Composition)
-  mounted                 -> có thể sử dụng onMounted (Composition)
-  update                 -> có thể sử dụng onUpdate(Compostion)
-  beforeDestroy          -> beforeUnmoute và onBeforeUnmoute
-  destroyed               ->unMouted và onUnMounted
+  mounted                  -> có thể sử dụng onMounted (Composition)
+  update                   -> có thể sử dụng onUpdate(Compostion)
+  beforeDestroy            -> beforeUnmoute và onBeforeUnmoute
+  destroyed                -> unMouted và onUnMounted
 
 
 // run trước cả data(){} nên NOT access attributes 
@@ -150,9 +150,6 @@ export default {
 }
 
 
-
-
-
 dung ref() code nhanh cho data()
 data: () => ({
   name: 'nguyen chi thong',
@@ -160,17 +157,41 @@ data: () => ({
     }),
  -->
 
-<script setup>
-import { ref, onMounted } from 'vue'
+/*
+  Composition API: setup() is syntax new in vuejs 3
 
+*/
+<script setup>
+import { ref, reactive, onMounted } from 'vue'
+/*
+  onBeforeMount(function)
+  onMounted(function)
+
+  onBeforeUpdate(function)
+  onUpdated(function)
+
+  onBeforeUnmount(function)
+  onUnmounted(function)
+  ...
+*/
+
+// use ref('value fo data') tao data attributes
 // elementDiv = ref="elementDiv"
 const elementDiv = ref("data created tu ref()")
+const count = ref(0)
 const name = ref("nguyen chi thong")
 const age = ref(35)
+const city = ref('Gia lai')
 
+const obj = reactive({ count: 0 })
+obj.count++
+
+// lifecycle hook
 onMounted(() => {
-  elementDiv.value // <div>
+  console.log(count)
 })
+
+
 </script>
 
 <template>
@@ -178,5 +199,23 @@ onMounted(() => {
     <p>hello lifecycle hooks</p>
     <p>{{name}}</p>
     <p>{{age}}</p>
+    <p>{{city}}</p>
+
+    <v-btn
+      elevation="2"
+      color="error"
+      @click="count++"
+    >
+    {{count}}
+    </v-btn>
+
+    <v-btn
+      elevation="2"
+      color="primary"
+      @click="obj.count++"
+    >
+    {{obj.count}}
+    </v-btn>
+
   </div>
 </template>
