@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HookView from '../views/HookView.vue'
 import ClockView from '../views/ClockView.vue'
+import TestView from '../views/TestView.vue'
 
 import Bind from '@/components/Bind'
 import BindModel from '@/components/BindModel'
@@ -32,6 +33,11 @@ const routes = [
     path: '/clock',
     name: 'Clock',
     component: ClockView
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: TestView
   },
   {
     path: '/bind',

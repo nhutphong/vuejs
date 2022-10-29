@@ -6,10 +6,12 @@ import { ref, onMounted } from 'vue'
 let time = ref(new Date())
 
 const updateTime = () => {
+  // new vuejs 3
   // khi update phai .value
-  time.value = new Date().toString("hh:mm:ss tt");
+  time.value = new Date().toLocaleTimeString()
 }
 
+// lifecycle hook
 onMounted(() => {
   var timeInterval = setInterval(updateTime, 1000)
 })
@@ -17,9 +19,13 @@ onMounted(() => {
 
 </script>
 
+
 <template>
+
   <v-container>
+
     <p>{{time}}</p>
+
   </v-container>
 
 </template>
